@@ -1,102 +1,189 @@
 <!DOCTYPE html>
-<html lang='en'>
-
+<html lang='de'>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/reset.css" type="text/css" rel="stylesheet">
-  <link href="css/main.css" type="text/css" rel="stylesheet">
-  <link href="css/portfolio.css" type="text/css" rel="stylesheet">
-  <title>Christian Weber About me</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christian Weber – Work</title>
+
+  <!-- Keep your existing CSS files -->
+  <link href="css/reset.css" type="text/css" rel="stylesheet" />
+  <link href="css/main.css" type="text/css" rel="stylesheet" />
+  <link href="css/portfolio.css" type="text/css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Layout: footer immer unten */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    main {
+      flex: 1;
+      display: block;
+    }
+
+    /* Content */
+    .work-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+      text-align: center;
+      font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    .work-item {
+      margin-bottom: 3rem;
+    }
+
+    /* Einheitliche Videogröße per Wrapper (stabil in allen Browsern) */
+    .video-frame {
+      width: 100%;
+      max-width: 1000px;           /* gleiche Breite für alle */
+      aspect-ratio: 16 / 9;        /* gleiche Höhe durch Seitenverhältnis */
+      background: #000;
+      border-radius: 12px;
+      margin: 0 auto;
+      overflow: hidden;
+      display: block;
+    }
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;           /* füllt die Fläche gleichmäßig */
+      display: block;
+    }
+
+    .work-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+    .work-meta {
+      color: rgba(0,0,0,.6);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+    .work-desc {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.55;
+      max-width: 80ch;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    /* Kleine Optimierungen */
+    .main-name h2 { opacity: .9; }
+    @media (max-width: 420px) {
+      .work-title { font-size: 1.15rem; }
+      .work-desc { font-size: .98rem; }
+    }
+  </style>
 </head>
 <body>
   <header class="header-main">
     <div class="header-main-logo">
       <a href="portfolio.html"><div class="header-main-logo-img"></div></a>
-      <!-- Web Navigation -->
       <nav class="header-main-nav">
         <ul>
           <li><a href="portfolio.html">HOME</a></li>
           <li><a href="photography.html">PHOTOGRAPHY</a></li>
-          <li><a href="work.html">WORK</a></li>
+          <li><a href="work.html" aria-current="page">WORK</a></li>
           <li><a href="about.html">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
-		
-		<!-- Handy Navigation -->
-		<div class="hamburger-menu">
-    		<input id="menu__toggle" type="checkbox">
-    			<label class="menu__btn" for="menu__toggle">
-      			<span></span>
-    			</label>
-    	<ul class="menu__box">
-        <li><a class="menu__item" href="portfolio.html">HOME</a></li>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="portfolio.html">HOME</a></li>
           <li><a class="menu__item" href="photography.html">PHOTOGRAPHY</a></li>
-          <li><a class="menu__item" href="work.html">WORK</a></li>
+          <li><a class="menu__item" href="work.html" aria-current="page">WORK</a></li>
           <li><a class="menu__item" href="about.html">ABOUT</a></li>
           <li><a class="menu__item" href="#contact">CONTACT</a></li>
-    	</ul>
-  		</div>
+        </ul>
+      </div>
     </div>
     <div class="header-main-socials">
-      <a href="https://www.instagram.com/christian.weber52/" target="_blank"><div class="header-main-socials-instagram"></div></a>
-      <a href="https://vsco.co/chrisu-/gallery" target="_blank"><div class="header-main-socials-vsco"></div></a>
+      <a href="https://www.instagram.com/christian.weber52/" target="_blank" rel="noopener"><div class="header-main-socials-instagram"></div></a>
+      <a href="https://vsco.co/chrisu-/gallery" target="_blank" rel="noopener"><div class="header-main-socials-vsco"></div></a>
     </div>
   </header>
 
   <main>
     <div class="main-name">
       <h1>Weber Christian</h1>
-      <h2>some of my work more coming soon ...</h2>
+      <h2>Meine Arbeiten</h2>
     </div>
-  </main>
 
-  <div class="photo-container">
-    <div class="photo-gallery">
-      <div class="photo-gallery-column">
-        <div class="photos">
-          <img src= "img/art1.png" alt="">
+    <section class="work-section">
+      <!-- Item 1 -->
+      <div class="work-item">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" muted>
+            <source src="videos/vid1.mp4" type="video/mp4" />
+          </video>
         </div>
-        <div class="photos">
-          <img src="img/art3.png" alt="">
-        </div>
-        <div class="photos">
-          <img src="img/work1.png" alt="">
-        </div>
+        <div class="work-title">Showreel / Kurzclip</div>
+        <div class="work-meta">Format: MP4</div>
+        <div class="work-desc">Ein Live-Videostream wird in Processing in Echtzeit so bearbeitet, dass ein atmosphärischer Ghost-Trail-Effekt entsteht. Die bewegten Konturen der Besucher*innen hinterlassen dabei sanft nachklingende Spuren, die sich fließend auflösen. Eingesetzt als visuelles Entertainment in den Eingangsbereichen von Konzerten schafft die Installation eine immersive, einladende Stimmung und steigert das Eventerlebnis bereits vor Beginn der Show.</div>
       </div>
-      <div class="photo-gallery-column">
-        <div class="photos">
-          <img src="img/art2.png" alt="">
+
+      <!-- Item 2 -->
+      <div class="work-item">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" muted>
+            <source src="videos/IND22_Weber_05_BouncingBall.mov" type="video/quicktime" />
+            <source src="videos/IND22_Weber_05_BouncingBall.mov" type="video/mp4" />
+          </video>
         </div>
-        <div class="photos">
-          <img src="img/art4.png" alt="">
+        <div class="work-title">Bouncing Ball</div>
+        <div class="work-meta">Animationsübung</div>
+        <div class="work-desc">Klassische Animationsübung zur Vermittlung von Timing und dem Prinzip Squash &amp; Stretch. Ziel war es, den physikalischen Charakter eines springenden Balls glaubwürdig darzustellen, indem Gewicht, Elastizität und Beschleunigung präzise aufeinander abgestimmt wurden.</div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="work-item">
+        <div class="video-frame">
+          <video controls playsinline preload="metadata" muted>
+            <source src="videos/IND22_Weber_06_Turntable.mov" type="video/quicktime" />
+            <source src="videos/IND22_Weber_06_Turntable.mov" type="video/mp4" />
+          </video>
         </div>
-        <div class="photos">
-          <img src="img/work2.png" alt="">
-        </div>
-    </div>
-  </div>
-  </div>
+        <div class="work-title">Turntable</div>
+        <div class="work-meta">Lookdev / Lighting</div>
+        <div class="work-desc">Eine 360°-Präsentation eines 3D-Objekts mit Fokus auf Materialität, Lichtsetzung und Renderqualität. Durch die kontinuierliche Rotation wird das Modell aus allen Blickwinkeln gezeigt und die fein abgestimmten Oberflächendetails kommen optimal zur Geltung.</div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer-main">
     <div class="footer-main-links">
-        <ul>
-          <li><a href="portfolio.html">HOME</a></li>
-          <li><a href="work.html">WORK</a></li>
-          <li><a href="photography.html">PHOTOGRAPHY</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-        </ul>
+      <ul>
+        <li><a href="portfolio.html">HOME</a></li>
+        <li><a href="work.html" aria-current="page">WORK</a></li>
+        <li><a href="photography.html">PHOTOGRAPHY</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
     </div>
     <div class="footer-main-contact" id="contact">
-        <ul>
-          <li>CONTACT</li>
-          <li><a href="#">chrisi.weber@gmail.com</a></li>
-          <li><a href="https://www.instagram.com/christian.weber52/" target="_blank">@christian.weber</a></li>
-        </ul>
+      <ul>
+        <li>CONTACT</li>
+        <li><a href="mailto:chrisi.weber@gmail.com">chrisi.weber@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/christian.weber52/" target="_blank" rel="noopener">@christian.weber</a></li>
+      </ul>
     </div>
   </footer>
 </body>
